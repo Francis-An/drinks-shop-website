@@ -142,6 +142,7 @@ header .logo {
 }
 .sideNav{
     visibility: hidden;
+    
 }
 .menu {
     visibility: hidden;
@@ -153,7 +154,12 @@ header .logo {
 }
 
 @media only screen and (max-width: 900px){
+    section {
+        padding: 100px 10px;
+        transition: 0.5s;
+    }
    header{
+      padding: 20px 10px;
       position: fixed;
       top: 0;
       left: 0;
@@ -165,7 +171,7 @@ header .logo {
    header .menu {
       position: absolute;
       top: 50px;
-      right: 100px;
+      right: 20px;
    }
     header ul {
         visibility: hidden;
