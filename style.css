@@ -1,0 +1,252 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    
+}
+header ul {
+    position: relative;
+    display: flex;
+      
+}
+header ul li {
+    list-style: none;
+
+}
+header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 20px;
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+header .logo {
+    max-width: 80px;
+}
+.content {
+    position: relative;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textbox {
+    position: relative;
+    width: 600px;
+    color: #333;
+}
+.content .textbox h2 {
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.content .textbox h2 span {
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.content .textbox a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #017143;
+    color: #fff;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+.imgbox {
+    position: relative;
+    margin-top: 50px;
+    padding-right: 50p; 
+    display: flex;
+    width: 600px;
+    justify-content: flex-end;
+}
+.imgbox img {
+    max-width: 340px;
+}
+.thumb {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    
+}
+.thumb li {
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover {
+    transform: translateY(-15%);
+}
+.thumb li img {
+    max-width: 60px;
+}
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    margin: 5px 0px;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+}
+.sideNav{
+    visibility: hidden;
+}
+.menu {
+    visibility: hidden;
+    cursor: pointer;
+}
+.close {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px){
+   header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+       
+       
+   }
+   header .menu {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+   }
+    header ul {
+        visibility: hidden;
+    }
+    .content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    .content .textbox {
+        position: relative;
+        width: 100%;
+        margin: 50px 0px;
+    }
+    .content .textbox h2 {
+        font-size: 2.5em;
+        font-weight: 600px;
+        line-height: 1.4em;
+    }
+    .imgbox {
+        width: 100%;
+    }
+    .imgbox img {
+        max-width: 300px;
+    }
+    .sci {
+        position: absolute;
+        top: 70%;
+        transform: translateY(-70%);
+    }
+    .circle{
+        clip-path: circle(400px at right 860px);
+    }
+    .sideNav {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #017143;
+        min-height: 100%;
+        width: 0px;
+        padding: 20px 0px;
+        z-index: 5;
+        transition: 0.5s;
+    }
+    .sideNav ul{
+        position: relative;
+        list-style: none;
+        margin: 0px;
+    }
+    .sideNav ul li {
+        display: block;
+        padding: 15px;
+        margin: 10px 0px;
+        background: #017143;
+        transition: 0.5;
+    }
+    .sideNav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2em;
+        font-weight: 400px;
+        line-height: 1.4em;
+        transition: 0.5;
+       
+    }
+    .sideNav ul li:hover {
+        background: #333;
+        border-radius: 2R0px;
+    }
+    .sideNav .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .menu {
+        visibility: visible;
+    }
+    .close {
+        visibility: visible;
+    }
+}
